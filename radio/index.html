@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>2016跨域加值計畫 | 語音學習平臺 </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="教育廣播電臺－跨領域加值計畫。教育廣播電臺從 1998 年開始,為因應網路時代,開始建立網路電臺,積極提升聽眾數。建立廣播節目音源檔數位典藏資料庫。讓聽眾能不受時間地點限制,隨時透過網路收聽,檢索,回溯所有歷史節目,最大程度活化其所有節目內容。 數位典藏從建立至今,已包含大量各式節目內容,但因數位典藏內容主要為廣播節目音源檔資料,較缺少節目內容文字稿,因此使用率仍然偏低。此種情形,亦不利分眾頻道系統的後臺策展人員操作使用。為使此豐富知識庫可以為使用者活用,並對社會產生正面影嚮力。本計劃希望透過提升使用者經驗與數位典藏資料自動加值,以支援教育廣播電臺新成立的『分眾頻道系統』,最大活化教育廣播電臺數位典藏的寶貴資源,進一步提升使用者人數。">
+
+        <!-- SEO -->
+        <meta property="og:url" content="http://140.124.183.14/EBCS/radio/">
+        <meta property="og:image" content="http://140.124.183.14/EBCS/radio/img/ogimg.png">
+        <meta property="og:title" content="2016跨域加值計畫 | 語音學習平臺">
+        <meta property="og:description" content="教育廣播電臺－跨領域加值計畫。教育廣播電臺從 1998 年開始,為因應網路時代,開始建立網路電臺,積極提升聽眾數。建立廣播節目音源檔數位典藏資料庫。讓聽眾能不受時間地點限制,隨時透過網路收聽,檢索,回溯所有歷史節目,最大程度活化其所有節目內容。 數位典藏從建立至今,已包含大量各式節目內容,但因數位典藏內容主要為廣播節目音源檔資料,較缺少節目內容文字稿,因此使用率仍然偏低。此種情形,亦不利分眾頻道系統的後臺策展人員操作使用。為使此豐富知識庫可以為使用者活用,並對社會產生正面影嚮力。本計劃希望透過提升使用者經驗與數位典藏資料自動加值,以支援教育廣播電臺新成立的『分眾頻道系統』,最大活化教育廣播電臺數位典藏的寶貴資源,進一步提升使用者人數。">
+
+        <!-- bootstrap and jQuery -->
+        <script async="" src="script/analytics.js"></script>
+        <script src="script/jquery-3.1.1.min.js"></script>
+
+        <link rel="stylesheet" href="script/bootstrap/css/bootstrap.min.css"> 
+        <script type="text/javascript" src="script/bootstrap/js/bootstrap.js"></script>
+
+        <!-- p5.js -->
+        <script type="text/javascript" src="script/p5js/p5.min.js"></script>
+        <script type="text/javascript" src="script/p5js/addons/p5.dom.js"></script>
+        <script type="text/javascript" src="script/p5js/addons/p5.sound.js"></script>    
+        <script type="text/javascript" src="sketch.js"></script>
+
+
+        <script language="javascript" type="text/javascript" src="script/p5js/play/p5.play.js"></script>
+        <!--        <script language="javascript" type="text/javascript" src="script/p5js/play/sprite9.js"></script>-->
+
+        <!--
+<script language="javascript" type="text/javascript" src="script/p5js/gibber/p5.gibber.min.js"></script>
+<link rel="stylesheet" href="script/p5js/gibber/examples.css">
+<script>hljs.initHighlightingOnLoad();</script>
+-->
+        <script type="text/javascript" src="script/add.js"></script>
+
+        <!-- mainstyle and animateuse -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/hover-min.css">
+        <script type="text/javascript" src="script/main.js"></script>
+        <script type="text/javascript" src="script/wow.min.js"></script>
+        <script type="text/javascript" src="script/stellar.js-master/jquery.stellar.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+
+        <!-- favicon -->
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+        <!-- google analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-79130055-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+    </head>
+    <body>
+
+        <!--        音樂放置-->
+        <!--        <audio src="" autoplay="autoplay" loop="-1" id="background_audio"></audio>-->
+
+        <div class="main">
+            <!-- fixed menu bar -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">2016跨域加值計畫 | 語音學習平臺</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#home">首頁</a></li>
+                            <li class=""><a href="#about">計畫介紹</a></li>
+                            <li><a href="#cooperation">跨域合作</a></li>
+                            <li><a href="#goal">目標規劃</a></li>
+                            <li><a href="#progress">各組進度</a></li>
+                            <li><a href="#learning">互動廣播學習專區</a></li>
+                            <li><a href="#crew">團隊人員</a></li>
+                            <li><a href="#contact">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Home-->
+            <!--animate p5首頁動畫-->
+
+            <div id="animation"> 
+            </div>
+
+            <section id="home">
+                <img src="img/home/bg/home_bg.png" class="home-bg">
+                <img src="img/home/home_title.png" class="home-title wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <img src="img/home/mobile_title.png" class="mobile-home-title">
+            </section>
+
+
+            <!--about 計畫介紹-->	
+            <section id="about">
+                <div class="biggreen"></div>
+                <div class="background"></div>
+                <div class="frame">
+                    <div class="title wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                        <img src="img/about/about-maintitle.png" class="maintitle" >
+                    </div>
+                    <div class="content">
+                        <p>
+                            教育廣播電臺－跨領域加值計畫
+                        </p>
+                        <br>
+                        <p>
+                            教育廣播電臺從 1998 年開始,為因應網路時代,開始建立網路電臺,積極提升聽眾數。建立廣播節目音源檔數位典藏資料庫。讓聽眾能不受時間地點限制,隨時透過網路收聽,檢索,回溯所有歷史節目,最大程度活化其所有節目內容。
+
+                        </p>
+                        <br>
+                        <p>
+                            數位典藏從建立至今,已包含大量各式節目內容,但因數位典藏內容主要為廣播節目音源檔資料,較缺少節目內容文字稿,因此使用率仍然偏低。此種情形,亦不利分眾頻道系統的後臺策展人員操作使用。
+                        </p>
+                        <br>
+                        <p>
+                            為使此豐富知識庫可以為使用者活用,並對社會產生正面影嚮力。本計劃希望透過提升使用者經驗與數位典藏資料自動加值,以支援教育廣播電臺新成立的『分眾頻道系統』,最大活化教育廣播電臺數位典藏的寶貴資源,進一步提升使用者人數。
+                        </p>
+                        <br>
+                        <p>
+                        <ul>
+                            <li>主要包括下列研究/開發子項:</li><br>
+                            <li>・教育廣播電臺數位典藏與分眾頻道系統資料庫擴充</li>
+                            <li>・使用者經驗優化</li>
+                            <li>・廣播節目語料庫加值與 open data 學術研究/產業開發授權發行</li>
+                            <li>・廣播節目語音文件摘要研發及運用</li>
+                            <li>・廣播節目關聯知識網建構 </li>
+                        </ul>
+                        </p>
+                </div>
+                </div>	
+            </section>
+
+        <!--cooperation 跨域合作-->
+        <section id="cooperation">
+            <img src="img/cooperation/bg/cooperation_bg.png" class="cooperation-bg">
+            <div class="frame">
+                <div class="title wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                    <img src="img/cooperation/cooperation-maintitle.png" class="maintitle">
+                </div>
+
+                <div class="content">
+               <div class="imageWrapper">
+                    <img src="img/cooperation/cross.png" class="cross" style="width:600px; margin-left:100px;">
+                    <img src="img/cooperation/cross-mobi.png" class="cross-mobi" style="width:320px;"  >
+                    <a  class="cornerLink">
+                       <ul>
+                           <li><strong>負責內容</strong></li>
+                            <li>◎教育廣播電臺：語音資料提供</li>
+                            <li>◎互動設計系：使用者經驗及應用情境設計、分析</li>
+                            <li>◎資工系：摘要、關鍵字及大數據分析</li>
+                            <li>◎電子系：語音轉換技術</li>
+                            <li>◎應用英語系：語音分析及語料庫建置</li>
+                        </ul> 
+                    </a>
+                </div>
+               
+                </div>
+
+                
+
+
+
+            </div>
+        </section>
+
+        <!--goal目標規劃  -->
+        <section id="goal">
+            <img src="img/goal/bg/cd.png" class="six">
+            <img src="img/goal/bg/cd1.png" class="six1">
+            <img src="img/goal/bg/cd2.png" class="six2">
+            <img src="img/goal/bg/goal_bg.png" class="goal-bg">
+            <div class="frame">
+                <div class="title wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                    <img src="img/goal/goal-title.png" class="main-title" >
+                </div>
+
+                <div id="schedule">
+                    <ul class="days">
+                        <li class="day1">
+                            <a href="#day1">
+                                KPI規劃大綱<img class="day1">
+                            </a>
+                        </li>
+                        <li class="day2">
+                            <a href="#day2">
+                                2016/09<img class="day2">
+                            </a>
+                        </li>
+                        <li class="day3">
+                            <a href="#day3">
+                                2016/10<img class="day3">
+                            </a>
+                        </li>
+                        <li class="day4">
+                            <a href="#day4">
+                                2016/11<img class="day4">
+                            </a>
+                        </li>
+                        <li class="day5">
+                            <a href="#day5">
+                                2016/12<img class="day5">
+                            </a>
+                        </li>
+                        <li class="day6 active">
+                            <a href="#day6">
+                                期中展示<img class="day6">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="time-container">
+                        <div id="day1" class="day1-time" style="display: none;">
+                            <h1><strong>KPI規劃大綱</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>網頁: 人機介面互動設計、服務設計、使用者Log</span>語料庫: 學習情境、網頁優化建議</p>
+                                張詠翔 老師 
+                                <p><span>網頁: 語料庫推廣資訊</span>語料庫: 語料庫設計製作</p>
+                                王正豪 老師 
+                                <p><span>網頁: 使用者查詢點選記錄分析</span>語料庫: 語料庫檢索、文字處理</p>
+                                廖元甫 老師
+                                <p><span>網頁: 語音與音樂切割辨認</span>語料庫: 語料庫加值</p>
+                            </div>
+                        </div>
+                        <div id="day2" class="day2-time" style="display: none;">
+                            <h1><strong>2016/09 進度</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>計畫規劃</span></p>
+                                張詠翔 老師 
+                                <p><span>語料庫設計規劃書（specification與protocol）</span></p>
+                                王正豪 老師 
+                                <p><span>語料庫檢索系統規劃</span></p>
+                                廖元甫 老師
+                                <p><span>中英文語音辨認系統</span></p>
+                            </div>
+                        </div>
+                        <div id="day3" class="day3-time" style="display: none;">
+                            <h1><strong>2016/10 進度</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>網站規劃</span></p>
+                                張詠翔 老師 
+                                <p><span>語料庫vol. 1內部release</span></p>
+                                王正豪 老師 
+                                <p><span>文字稿資料前處理</span></p>
+                                廖元甫 老師
+                                <p><span>語音與音樂切割辨認系統</span></p>
+                            </div>
+                        </div>
+                        <div id="day4" class="day4-time" style="display: none;">
+                            <h1><strong>2016/11 進度</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>服務設計工作坊</span></p>
+                                張詠翔 老師 
+                                <p>無<span></span></p>
+                                王正豪 老師 
+                                <p><span>文字稿索引建置</span></p>
+                                廖元甫 老師
+                                <p><span>語料庫vol. 1逐字稿內部release</span></p>
+                            </div>
+                        </div>
+                        <div id="day5" class="day5-time" style="display: none;">
+                            <h1><strong>2016/12 進度</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>網站雛型及人機互動介面設計</span></p>
+                                張詠翔 老師 
+                                <p><span>語料庫vol. 2內部release</span></p>
+                                王正豪 老師 
+                                <p><span> 文字稿檢索功能及網站查詢點選記錄</span></p>
+                                廖元甫 老師
+                                <p><span>無</span></p>
+                            </div>
+                        </div>
+                        <div id="day6" class="day6-time">
+                            <h1><strong>期中展示</strong></h1>
+                            <div class="date"></div>
+                            <div class="ttable">
+                                王聖銘 老師  
+                                <p><span>網站雛型及服務機制</span></p>
+                                張詠翔 老師 
+                                <p><span>無</span></p>
+                                王正豪 老師 
+                                <p><span>語料庫檢索系統雛型展示</span></p>
+                                廖元甫 老師
+                                <p><span>（1）語音與音樂切割辨認展示雛形系統</span><br>（2）語料庫vol. 2逐字稿內部release</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>     
+
+
+        <!--progress 各組進度-->
+
+        <section id="progress">
+            <img src="img/progress/bg/progress_bg.png" class="progress-bg">
+            <!--            <img src="img/progress/bg/spring.gif" class="spring" width="50px">-->
+
+            <div class="frame">	
+                <div class="crewtitle wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                    <img src="img/progress/progress-title.png">
+                </div>
+            </div>
+
+            <div class="frame">
+                <div class="title">
+                    <div class="button" data-toggle="modal" data-target="#myModal">
+                        <span>摘要、關鍵字、大數據分析</span>
+                    </div>
+                    <div class="button" data-toggle="modal" data-target="#myModal2">
+                        <span>語音<br>轉換<br>技術</span>
+                    </div>
+                    <div class="button" data-toggle="modal" data-target="#myModal3">
+                        <span>語音分析及語料庫建置</span>
+                    </div>
+                    <div class="button" data-toggle="modal" data-target="#myModal4">
+                        <span>使用者經驗及應用情境分析</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Modal1-->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">摘要、關鍵字、大數據分析</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        2016.10.25 
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal2 -->
+                    <div class="modal fade" id="myModal2" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">語音轉換技術</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        2016.10.25
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal3 -->
+                    <div class="modal fade" id="myModal3" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">語音分析及語料庫建置</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal4 -->
+                    <div class="modal fade" id="myModal4" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">使用者經驗及應用情境分析</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        2016.10.25 網站建置中...
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="list" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+            <!--learning 互動廣播學習專區-->   
+            <section id="learning">
+                <img src="img/learning/bg/learning_bg.png" class="learning-bg">
+                <div class="frame">	
+                    <div class="crewtitle wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                        <img src="img/learning/learning-maintitle.png" class="learning-title">
+                        <img src="img/learning/mobile_title.png" class="learning-mobile">
+                    </div>
+                </div>
+
+                <div class="frame">
+                    <div class="title">
+                        <div class="button">
+                            <a href="http://140.124.183.14/EBCS/player/" target="_blank">
+                                <span>點我進入</span>
+                            </a>
+                        </div>
+                    </div>
+                    </section>
+
+
+                <!--Crew-->
+                <section id="crew">
+                    <!--                    <img src="img/crew/bg/crew_bg.png" class="crew-bg">-->
+                    <div class="frame">	
+                        <div class="crewtitle wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+                            <img src="img/crew/crew-title.png">
+                        </div>
+                    </div>
+                    <div id="crewList" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="list-box">
+                            <div class="item">
+                                <div class="box">
+                                    <h4>使用者經驗及應用情景設計、分析</h4>
+                                    <div class="person">
+                                        <div class="name">王聖銘</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學互動設計系<br>
+                                            職稱：副教授
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">朱令儀</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學互動設計系<br>
+                                            職稱：計畫助理
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">林郁蓉</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學互動設計所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">黃家禾</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學互動設計所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <h4>摘要、關鍵字及大數據分析</h4>
+                                    <div class="person">
+                                        <div class="name">王正豪</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學資訊工程系<br>
+                                            職稱：副教授
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">洪學儒</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學資訊工程所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">陳其斌</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學資訊工程所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">馬詩翔</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學資訊工程所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">羅煜賢</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學資訊工程所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="box">
+                                    <h4>語義分析及語料庫建置</h4>
+                                    <div class="person">
+                                        <div class="name">張詠翔</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學應用外語系<br>
+                                            職稱：助理教授
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">沈君毅</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學應用外語系<br>
+                                            職稱：大學生
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item active">
+                                <div class="box">
+                                    <h4>語音轉換技術</h4>
+                                    <div class="person">
+                                        <div class="name">廖元甫</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學電子工程系<br>
+                                            職稱：副教授
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">王星月</div>
+                                        <div class="describtion">
+                                            國立臺北科技大學電子工程所<br>
+                                            職稱：研究生
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="box">
+                                    <h4>配合計畫進行教育廣播電臺有關事項之協調事宜</h4>
+                                    <div class="person">
+                                        <div class="name">陳建志</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/數位資訊組<br>
+                                            職稱：主任
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">蔡玉秀</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/數位資訊組<br>
+                                            職稱：設計師
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <h4>教育廣播電臺團隊人員</h4>
+                                    <div class="person">
+                                        <div class="name">王育群</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺<br>
+                                            職稱：臺長
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">李方琪</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺<br>
+                                            職稱：副臺長
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">呂敏君</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/節目組<br>
+                                            職稱：主任
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">黃素員</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/新聞組<br>
+                                            職稱：主任
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">陳建志</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/數位資訊組<br>
+                                            職稱：主任
+                                        </div>
+                                    </div>
+                                    <div class="person">
+                                        <div class="name">蔡玉秀</div>
+                                        <div class="describtion">
+                                            國立教育廣播電臺/數位資訊組<br>
+                                            職稱：設計師
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#crewList" data-slide-to="0" class=""></li>
+                            <li data-target="#crewList" data-slide-to="1" class="active"></li>
+                        </ol>
+                    </div>		
+                </section>
+
+                <section id="sponsor">
+                    <div class="frame">
+                        <img src="img/sponsor/bg/cd.png" class="green">
+                        <img src="img/sponsor/bg/left.png" class="left-bg">
+
+                        <div class="organizer">
+                            <div class="title">主辦單位</div>
+                            <img src="img/sponsor/s5.png" width="210px">
+                        </div>
+                        <div class="co-organizer">
+                            <div class="title">協辦單位</div>
+                            <img src="img/sponsor/s1.png" width="225px">
+                            <img src="img/sponsor/s2.png" width="225px">
+                            <img src="img/sponsor/s3.png" width="200px">
+                            <img src="img/sponsor/s4.png" width="225px">
+
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <img src="img/contact/bg/contact_bg.png" class="contact-bg">
+                    <img src="img/contact/bg/contact_bg.png" class="contact-bg2">
+                    <div class="frame">
+                        <img src="img/contact/contact.png" class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="info wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div> 國立教育廣播電臺: <a href="http://eradio.ner.gov.tw" target="_blank">
+                                官方網站</a>
+                            </div>
+                            <div> 國立教育廣播電臺: <a href="http://digitweb.ner.gov.tw/bin/home.php" target="_blank">
+                                數位典藏資料庫</a>
+                            </div>
+                            <br>
+                            <div>配合計畫進行教育廣播電臺有關事項之聯絡事宜請洽</div>
+
+                            <div>國立教育廣播電臺/數位資訊組: <a href="mailto:yhtsai@ner.gov.tw">蔡玉秀 設計師</a></div>
+                            <br>
+
+                            <div>配合此計畫北科大相關之聯絡事宜請洽</div>
+                            <div>國立臺北科技大學/電子系: <a href="mailto:yfliao@mail.ntut.edu.tw">
+                                廖元甫 老師
+                                </a><br>
+                                TEL：(02) 27712171 ext. 2247
+                            </div>
+                            <br>
+                            <div> © Copyright 2016 SISD Lab</div>
+                        </div>
+                    </div>
+                </section>
+
+                </body>
+            </html>

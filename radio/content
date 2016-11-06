@@ -1,0 +1,235 @@
+    <div class="content">
+
+                    <div class="box">
+                        <div class="step">step</div>
+                        <div class="number">1</div>
+                        <button data-toggle="modal" data-target="#myModal">
+                            <img src="img/registration/pencil.png" class="hvr-grow-rotate" width="25px">
+                        </button>
+                        <div class="step-title">活動與報名資訊</div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="step">step</div>
+                        <div class="number">2</div>
+                        <button data-toggle="modal" data-target="#myModal2">
+                            <img src="img/registration/quiz.png" class="hvr-grow-rotate" width="68px">
+                        </button>
+                        <div class="step-title">線上問卷（報名已截止）</div>
+                    </div>
+
+                    <div class="box">
+                        <div class="step">step</div>
+                        <div class="number">3</div>
+                        <button data-toggle="modal" data-target="#myModal3">
+                            <img src="img/registration/card.png" class="hvr-grow-rotate" width="88px">
+                        </button>
+                        <div class="step-title"><span>IDcard</span>內容說明（報名已截止）</div>
+                    </div>
+
+                    <div class="box">
+                        <div class="step">step</div>
+                        <div class="number">4</div>
+                        <button data-toggle="modal" data-target="#myModal4">
+                            <img src="img/registration/money.png" class="hvr-grow-rotate" width="72px">
+                        </button>
+                        <div class="step-title">繳交保證金</div>
+                    </div>
+
+                    <!-- Modal -->
+
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">活動與報名資訊</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        【 活動時間 】 <br>
+                                        2016 年 7 月 5 日 (二) 至 2016 年 7 月 10 日 (日) ，共 6 天。<br>
+                                        每日活動開始時間皆為 09:00，結束時間為 18:00 – 18:30 不等。 <br>
+                                        <br>
+                                        【 活動地點 】 <br>
+                                        國立臺灣科技大學<br>
+                                        <br>
+                                        【 報名學員資格 】 <br>
+                                        全國各大專院校在學學生，包含大學部三年級以上與碩/博生。<br>
+                                        <br>
+                                        【 招生時程 】<br>
+                                        線上報名時間：6/11(六) 00:00 至 6/23(四) 23:59 前<br>
+                                        <br>
+                                        正取名單公佈：6/25(六) 網路公佈與信件通知，請自行上網查看<br>
+                                        遞補備取通知：6/27(一) 個別電話通知<br>
+                                        <br>
+                                        【 報名方式 】<br>
+                                        在報名期限內，備妥報名相關資料後，經報名連結線上報名。<br>
+                                        公佈與通知正/備取之學員，請於指定時間內繳交1000元保證金，並回覆系統匯款資訊以確認成功匯款，經由查證後完成報名程序。<br>
+                                        未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。正取者請於6/27(ㄧ) 17:00 前繳交保證金以完成報名程序。備取名單會於6/27(一) 後個別電話通知，備取者請於6/28(二) 17:00 前繳交保證金以完成報名程序。<br>
+                                        （本活動透過報名資料作為錄取參考依據，挑選正/備取學員並於網站公佈與通知，與報名順序時間無關。）
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal2" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">報名準備內容</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        進入線上報名系統前需準備兩份報名資料，包含「線上問卷」與「IDCard」兩部分：<br>
+                                        &nbsp;&nbsp;1.「線上問卷」為線上填寫作業，包含個人基本資料、教育背景兩部分。<br>
+                                        &nbsp;&nbsp;2.「IDCard」為一份兩頁之投影片，包含“個人簡歷”與“問題發想”<br>
+                                        PS.檔案請自行製作與編排，並存檔輸出PDF檔<br>
+                                        可於“問題發想”內容中附加輔助說明之素材 (手繪、電繪圖片、照片或另附影片，格式不限)<br>
+                                        PDF檔名標題請依格式填寫： [2016 IDCard] 校系_姓名 (範例：[2016 IDCard] 台科大工商業設計系_王曉明)<br>
+                                        若有其他輔助說明之素材，請將檔案放至上傳空間(ex. dropbox)後將上傳連結附於報名系統內。<br>
+                                        若檔名或檔案格式不符，造成漏檔，報名者請自行負責。
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal3" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">IDCard內容說明</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。<br>
+                                        第一頁請放個人簡歷，表達格式不限。<br>
+                                        第二頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。<br>
+                                        <br>
+                                        &nbsp;&nbsp;
+                                        1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。<br>
+                                        &nbsp;&nbsp;
+                                        2. 本次活動主題為超覺未來，請你想像五至十年的未來、科技會如何加強人類的能力（包含感知能力、運動能力、表達能力），並描述一例。具體描述內容包括：<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        a. 未來的人類有什麼需求或不足，因此需要加強某種能力。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        b. 這項能力是什麼。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        c. 可以達到什麼新的互動。<br>
+                                        <br>
+                                        IDCard範例一：<a href="https://goo.gl/Sczc4v" class="template-link" target="_blank">https://goo.gl/tCWmWj</a><br>
+                                        IDCard範例二：<a href="https://goo.gl/a0g00z" class="template-link" target="_blank">https://goo.gl/a0g00z</a><br>
+                                        IDCard範例三：<a href="https://goo.gl/xuA9QO" class="template-link" target="_blank">https://goo.gl/xuA9QO</a><br>
+                                        IDCard空白模板：<a href="https://goo.gl/8IsU8R" class="template-link" target="_blank">https://goo.gl/8IsU8R</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal4" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">報名保證金須知</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        正取學員會於6/25(六) 網路公佈與信件通知，請自行上網查看， 並請在6/27(一) 17:00 前繳交1000元保證金。<br>
+                                        經由電話通知的備取學員，請於6/28(二) 17:00 前繳交保證金以完成報名程序，此保證金保證學員參予工作營期間內，全日數出席參與活動，並無無故缺席或其他不可避免之因素請假者，可於活動最後一天全額退予保證金。<br>
+                                        <br>
+                                        繳交保證金方式<br>
+                                        指定銀行與匯款帳戶如下：<br>
+                                        <br>
+                                        銀行代碼：013 (國泰世華) <br>
+                                        帳號：212-50-608894-9 <br>
+                                        戶名：李宜 <br>
+                                        金額：1000元<br>
+                                        <br>
+                                        ※請不要使用無摺存款<br>
+                                        <br>
+                                        匯款後請報名者提供匯款戶名與帳號後五碼<br>
+                                        回覆Open HCI 2016主辦人事組：human@openhci.com以確認成功匯款<br>
+                                        主辦單位確認報名與匯款資料後完成報名。<br>
+                                        <br>
+                                        疑問聯絡<br>
+                                        關於報名有任何問題，歡迎寄信給主辦單位： 
+                                        <a href="mailto:human@openhci.com" class="template-link">human@openhci.com (人事組)</a><br>
+                                        官方網站：
+                                        <a href="http://www.openhci.com/" class="template-link" target="_blank">http://www.openhci.com</a><br>
+                                        粉絲頁：
+                                        <a href="https://www.facebook.com/openhci" class="template-link" target="_blank">https://www.facebook.com/openhci</a><br>
+                                        OpenHCI 2016，感謝您的參與 Best regards.<br>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="list" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">OpenHCI 2016 錄取名單</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="info">
+                                        報名正取名單<br>
+                                        ★ 錄取名單依姓氏筆畫排序，分隊名單將另行公佈。<br>
+                                        <br>
+                                        方○奕　何○穎　何○安　呂○儀　巫○瑄　李○德 <br>
+                                        李○維　周○婷 (臺大) 林○萱　林○微　林○蓉　林○齊 <br>
+                                        林○平　邱○箴　洪○瀚　洪○婷　胡○沛　徐○駿 <br>
+                                        翁○軒　高○澤　張○慈　張○諭　張○雅　張○珊 <br>
+                                        張○然　張○云　章○　    郭○臻　陳○如　陳○瑋 <br>
+                                        陳○伶　陳○儒 (政大) 曾○哲　黃○錚　黃○瑄　黃○儒 (臺科) <br>
+                                        楊○馨　楊○　    楊○之　詹○衡　劉○捷　潘○頤 <br>
+                                        蕭○軒　賴○昇　簡○真　藍○婷　顏○真　魏○ <br>
+                                        <br>
+                                        報名備取名單<br>
+                                        ★ 備取名單依姓氏筆畫排序，備取名額依照正取放棄人數調整，並於6/27(一) 17:00後另行電話通知。<br>
+                                        <br>
+                                        江○儒　吳○樺　李○勝　李○綾　周○婷 (長庚) 林○聿 <br>
+                                        林○娟　林○諭　姚○宏　洪○閔　徐○碩　張○郡 <br>
+                                        連○宇　陳○亘　陳○儒 (臺科) 陳○穎　曾○婷　黃○嘉 <br>
+                                        鄒○軒　賴○婉　羅○恆<br>
+                                        <br>
+                                        <h4>報名保證金繳交須知</h4>
+                                        請以上正取同學參照「stpe4繳交保證金」進行保證金繳交作業。<br>
+                                        <br>
+                                        <h4>轉播預告</h4>
+                                        為了讓未錄取同學也能聆聽演講、認識HCI，今年有七場演講提供全程網路直播（同步直播，不重播），歡迎大家準時參與，詳細講題與時間請見官方網站。我們也誠摯邀請想了解人機互動的大家，前來參與7/10（日）13:00～17:00的成果展示，地點在臺灣科技大學國際大樓一樓玻璃屋。再次感謝各位對OpenHCI的支持參與。<br>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
